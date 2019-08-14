@@ -1,0 +1,20 @@
+<div class='quick_short'>
+	<div class='title row'><h3><?php echo Mage::getStoreConfig('categorybrowser_options/messages/sidebar_title',Mage::app()->getStore()); ?></h3></div>
+</div>
+<?php
+$themeId = Mage::app()->getRequest()->getParam('themeId');
+$tree = $this->getTree();
+
+foreach ($tree as $cat):
+?>
+<?php if ($themeId AND $cat['cat']->getUrlKey() != $themeId) continue; ?>
+<div class='title_1'><?php echo $cat['cat']->getName(); ?></div>
+<div class='box'>
+<ul>
+<?php foreach ($cat['children'] as $child): ?>
+    <?php $child = Mage::getModel('catalog/category')->load($child->getId()); ?>
+<li><a href='<?php echo $child->getUrl(); ?>'><?php echo $child->getName(); ?></a></li>
+<?php endforeach; ?>
+</ul>
+</div>
+<?php endforeach; ?>

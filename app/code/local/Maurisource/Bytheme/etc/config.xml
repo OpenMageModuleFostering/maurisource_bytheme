@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *Maurisource_Bytheme extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category      Maurisource
+ * @package       Maurisource_Bytheme
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Maurisource_Bytheme>
+            <version>1.0.0</version>
+        </Maurisource_Bytheme>
+    </modules>
+    <global>        
+        <blocks>
+            <maurisource_bytheme>
+                <class>Maurisource_Bytheme_Block</class>
+            </maurisource_bytheme>
+        </blocks>
+        <helpers>
+            <maurisource_bytheme>
+                <class>Maurisource_Bytheme_Helper</class>
+            </maurisource_bytheme>
+        </helpers>
+        <models>
+            <maurisource_bytheme>
+                <class>Maurisource_Bytheme_Model</class>
+                <resourceModel>maurisource_bytheme_resource</resourceModel>
+            </maurisource_bytheme>
+            <maurisource_bytheme_resource>
+                <class>Maurisource_Bytheme_Model_Resource</class>
+                <entities>
+                    <theme>
+                        <table>maurisource_bytheme_theme</table>
+                    </theme>
+                </entities>
+            </maurisource_bytheme_resource>
+        </models>
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <maurisource_bytheme>
+                        <class>Maurisource_Bytheme_Controller_Router</class>
+                        <method>initControllerRouters</method>
+                    </maurisource_bytheme>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+    </global>
+    <frontend>
+        <routers>
+            <maurisource_bytheme>
+                <use>standard</use>
+                <args>
+                    <module>Maurisource_Bytheme</module>
+                    <frontName>by-category</frontName>
+                </args>
+            </maurisource_bytheme>
+        </routers>
+        <layout>
+            <updates>
+                <maurisource_bytheme>
+                    <file>maurisource_bytheme.xml</file>
+                </maurisource_bytheme>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Maurisource_Bytheme>
+                    <files>
+                        <default>Maurisource_Bytheme.csv</default>
+                    </files>
+                </Maurisource_Bytheme>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+        <categorybrowser_options>
+            <messages>
+                <starting_directory>2</starting_directory>
+                <url_slug>category-browser</url_slug>
+                <sidebar_title>Categories</sidebar_title>
+                <main_title>Categories</main_title>
+                <main_content>With dozens of different products to choose from, you are sure to find what you are looking for here.</main_content>
+            </messages>
+        </categorybrowser_options>
+    </default>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <categorybrowser_options>
+                                            <title>Category Browser Admin Section</title>
+                                        </categorybrowser_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

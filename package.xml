@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Maurisource_ByTheme</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>ASL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Allow users to easily browse through your product categories.</summary>
+    <description>Quick installation to allow for your users to browse through your product categories. This could either be from your core category, or just using a subset of categories. Ideal for browsing by theme or by genre.</description>
+    <notes>Initial Release</notes>
+    <authors><author><name>Manesh Sonah</name><user>maneso</user><email>maurisource.seo@gmail.com</email></author></authors>
+    <date>2014-11-18</date>
+    <time>09:55:00</time>
+    <contents><target name="magelocal"><dir name="Maurisource"><dir name="Bytheme"><dir name="Block"><dir name="Theme"><file name="List.php" hash="caf57eed5d37d3f6a1e4cb0620214ebd"/><file name="Sidebar.php" hash="4a6d7e78df25896c884ba971579f2330"/><file name="View.php" hash="0bd24109194caada8e3c1753f91fc430"/></dir></dir><dir name="Controller"><file name="Router.php" hash="9f131bdd6288388bcbf24afafa4dd3a1"/></dir><dir name="Helper"><file name="Data.php" hash="d29afdfb1cdd8495341f1085722df927"/><file name="Theme.php" hash="b38cb369af68b8604197364c3a4dd1eb"/></dir><dir name="controllers"><file name="ThemeController.php" hash="1b4a479ff1df72f479f160c12ac82f18"/></dir><dir name="etc"><file name="config.xml" hash="5d7df73ee7a462c162db3f74e03c63a3"/><file name="system.xml" hash="c5cda61a2b230e534a5f54659e9db2e9"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="maurisource_bytheme"><dir name="theme"><file name="list.phtml" hash="8a9681dcf1a623537244e6fa46824d25"/><file name="sidebar.phtml" hash="8750b3518d3641247aeea7f9f78984df"/></dir></dir></dir><dir name="layout"><file name="maurisource_bytheme.xml" hash="89929d9aa4cd5b382a7dcda2a4cad964"/></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="maurisource_bytheme.xml" hash="703f8102d43fa98ef9ea56b5abcf7b16"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Maurisource_Bytheme.xml" hash="367e0712e8e733536c2aaf6556b78873"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>5.6.0</max></php></required></dependencies>
+</package>

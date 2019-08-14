@@ -1,0 +1,71 @@
+<config>
+    <tabs>
+        <categorybrowser translate="label" module="maurisource_bytheme">
+            <label>Category Browser</label>
+            <sort_order>10000</sort_order>
+        </categorybrowser>
+    </tabs> 
+    <sections>
+        <categorybrowser_options translate="label" module="maurisource_bytheme">
+            <label>Category Browser Config</label>
+            <tab>categorybrowser</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+            <groups>
+                <messages translate="label">
+                    <label>Category Browser Config</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>                
+			    <fields>
+				<starting_directory>
+				    <label>Starting Category ID</label>
+				    <frontend_type>text</frontend_type>
+				    <sort_order>1</sort_order>
+				    <show_in_default>1</show_in_default>
+				    <show_in_website>1</show_in_website>
+				    <show_in_store>1</show_in_store>                    
+				</starting_directory>
+				<url_slug>
+				    <label>URL Slug</label>
+				    <frontend_type>text</frontend_type>
+				    <sort_order>1</sort_order>
+				    <show_in_default>1</show_in_default>
+				    <show_in_website>1</show_in_website>
+				    <show_in_store>1</show_in_store>                    
+				</url_slug>                                
+				<sidebar_title>
+				    <label>Sidebar Title</label>
+				    <frontend_type>text</frontend_type>
+				    <sort_order>1</sort_order>
+				    <show_in_default>1</show_in_default>
+				    <show_in_website>1</show_in_website>
+				    <show_in_store>1</show_in_store>                    
+				</sidebar_title>
+				<main_title>
+				    <label>Main Title</label>
+				    <frontend_type>text</frontend_type>
+				    <sort_order>1</sort_order>
+				    <show_in_default>1</show_in_default>
+				    <show_in_website>1</show_in_website>
+				    <show_in_store>1</show_in_store>                    
+				</main_title>    
+				<main_content>
+				    <label>Main Content</label>
+				    <frontend_type>textarea</frontend_type>
+				    <sort_order>1</sort_order>
+				    <show_in_default>1</show_in_default>
+				    <show_in_website>1</show_in_website>
+				    <show_in_store>1</show_in_store>                    
+				</main_content>                                                                                                 
+			    </fields> 
+                </messages>
+            </groups>
+        </categorybrowser_options>
+    </sections>  
+</config>

@@ -1,0 +1,84 @@
+<?php 
+/**
+ * Maurisource_Bytheme extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Maurisource
+ * @package        Maurisource_Bytheme
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+/**
+ * Theme list template
+ *
+ * @category    Maurisource
+ * @package     Maurisource_Bytheme
+ * @author      Ultimate Module Creator
+ */
+?>
+<style>
+.mainCat {
+	width:25%;
+	margin-right:5%;
+	float:left;
+	height:170px;
+	overflow:hidden;
+	margin-bottom:10px;
+	text-align:center;
+}
+.subCats {
+	width:70%;
+	float:left;
+}
+
+
+.mainCat  img {
+	height:140px;
+	
+}
+
+.subCats li {
+	display:block;
+	width:50%;	
+	line-height:30px;
+	float:left;
+}
+
+
+hr.clear {
+	width:100%;
+	display:block;
+	clear:both;
+	margin:10px 0px;
+	border: 1px solid #AAAAAA;
+}
+
+</style>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $_cats = $this->getCategories(); ?>
+<div class="page-title theme-title">
+    <h1><?php echo Mage::getStoreConfig('categorybrowser_options/messages/main_title',Mage::app()->getStore()); ?></h1>
+</div>
+<p><?php echo Mage::getStoreConfig('categorybrowser_options/messages/main_content',Mage::app()->getStore()); ?></p>
+    <div class="theme-list-container">
+    <?php foreach ($_cats as $_cat) : ?>
+<?php $cat = Mage::getModel('catalog/category')->load($_cat['cat']->getId()); ?>
+		<div class='mainCat'>
+			<a href='<?php echo Mage::getBaseUrl(); ?>/<?php echo Mage::getStoreConfig('categorybrowser_options/messages/url_slug',Mage::app()->getStore()); ?>/<?php echo $cat->getUrlKey(); ?>/'><img src='<?php echo Mage::getBaseUrl('media').'catalog/category/'.$cat->getThumbnail()  ?>' /></a>
+			<h3><a href='<?php echo Mage::getBaseUrl(); ?>/<?php echo Mage::getStoreConfig('categorybrowser_options/messages/url_slug',Mage::app()->getStore()); ?>/<?php echo $cat->getUrlKey(); ?>/'><?php echo $cat->getName(); ?></a></h3>
+		</div>
+		<div class='subCats'>
+		<?php foreach ($_cat['children'] as $child): ?>
+                    <?php $child = Mage::getModel('catalog/category')->load($child->getId()); ?>
+			<li><a href='<?php echo $child->getUrl(); ?>'><?php echo $child->getName(); ?></a></li>
+		<?php endforeach; ?>
+		</div>
+		<hr class='clear' />
+    <?php endforeach;?>
+    </div>

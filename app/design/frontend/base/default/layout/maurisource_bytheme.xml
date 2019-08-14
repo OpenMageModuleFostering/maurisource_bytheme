@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Buyjigsaw_Bytheme extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Buyjigsaw
+ * @package        Buyjigsaw_Bytheme
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<layout>
+    
+    <maurisource_bytheme_theme_index translate="label" module="maurisource_bytheme">
+        <label>Themes list</label>
+        <update handle="page_two_columns_left" />
+        <reference name="content">
+            <block type="maurisource_bytheme/theme_list" name="theme_list" template="maurisource_bytheme/theme/list.phtml" />
+        </reference>
+	<reference name="left">
+		<block type="maurisource_bytheme/theme_sidebar" name="theme_sidebar" template="maurisource_bytheme/theme/sidebar.phtml" />
+	</reference>
+    </maurisource_bytheme_theme_index>
+    <maurisource_bytheme_theme_view translate="label" module="maurisource_bytheme">
+        <label>Theme view page</label>
+        <update handle="page_two_columns_left" />
+        <reference name="content">
+            <block type="maurisource_bytheme/theme_view" name="theme_view" template="maurisource_bytheme/theme/view.phtml" />
+        </reference>
+        <reference name="left">
+                <block type="maurisource_bytheme/theme_sidebar" name="theme_sidebar" template="maurisource_bytheme/theme/sidebar.phtml" />
+        </reference>
+    </maurisource_bytheme_theme_view>
+</layout>
