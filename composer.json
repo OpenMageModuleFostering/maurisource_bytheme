@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Maurisource_ByTheme",
+    "name": "OpenMageModuleFostering\/Maurisource_ByTheme",
     "type": "magento-module",
     "license": "ASL",
     "homepage": "",
     "description": "Allow users to easily browse through your product categories.",
     "authors": [
-    {
-        "name": "Manesh Sonah",
-        "email": "maurisource.seo@gmail.com"
-    }
-],
+        {
+            "name": "Manesh Sonah",
+            "email": "maurisource.seo@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
